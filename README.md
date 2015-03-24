@@ -1,4 +1,53 @@
-# 在浏览器端和客户端下载并打包文件
+# 在浏览器端和服务器端下载并打包文件
+
+
+## 示例代码
+
+- 服务器端下载示例
+
+```
+$ git clone https://github.com/laispace/downloadFilesInBrowserAndServer.git
+
+$ cd downloadFilesInBrowserAndServer
+
+$ npm install
+
+$ npm start
+
+```
+
+打开浏览器 http://127.0.0.1:4000
+
+- 客户端下载示例
+
+打开浏览器 http://laispace.com/downloadFilesInBrowserAndServer/public/
+
+(用最新的 Chrome 打开吧，不然别打我)
+
+- Blob 操作示例
+
+[blob.js](blob.js)
+
+- createObjectURL 代码
+
+[createObjectURL.html](createObjectURL.html)
+
+
+- dataURL 与 objectURL 对比
+
+[DataURL&ObjectURL.html](DataURL&ObjectURL.html)
+
+- 服务器下载文件代码
+
+[routes/index.js](routes/index.js)
+
+- 客户端下载文件代码
+
+[public/index.html](public/index.html)
+
+[public/js/main.js](public/js/main.js)
+
+
 
 考虑以下场景：
 
@@ -56,7 +105,7 @@ var array = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>'
 var myBlob = new Blob(array, {type: 'text/html'});
 
 // 输出看看有啥
-console.log(myBlob); // => Blob {type: "text/html", size: 65, slice: function}
+console.log(myBlob);
 
 // 大小，单位为字节
 var size = myBlob.size;
@@ -286,51 +335,6 @@ ajax 异步下载文件，如何得知所有文件下载完成呢？
 6. 兼容性: 你懂的。
 
 
-## 示例代码
-
-- 服务器端下载示例
-
-```
-$ git clone https://github.com/laispace/downloadFilesInBrowserAndServer.git
-
-$ cd downloadFilesInBrowserAndServer
-
-$ npm install
-
-$ npm start
-
-```
-
-打开浏览器 http://127.0.0.1:4000
-
-- 客户端下载示例
-
-打开浏览器 http://laispace.com/laiDownloadDemo/public/
-
-(用最新的 Chrome 打开吧，不然别打我)
-
-- Blob 操作示例
-
-[blob.js](blob.js)
-
-- createObjectURL 代码
-
-[createObjectURL.html](createObjectURL.html)
-
-
-- dataURL 与 objectURL 对比
-
-[DataURL&ObjectURL.html](DataURL&ObjectURL.html)
-
-- 服务器下载文件代码
-
-[routes/index.js](routes/index.js)
-
-- 客户端下载文件代码
-
-[public/index.html](public/index.html)
-
-[public/js/main.js](public/js/main.js)
 
 ### 参考链接
 
