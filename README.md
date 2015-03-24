@@ -177,7 +177,11 @@ console.log(url);
 
 ![demo img](public/img/r.png?raw=true)
 
-若需要指定下载的名字，则给 download 属性赋值，如 <a href="blob:xxx" download="myName">下载</a>
+若需要指定下载的名字，则给 download 属性赋值，如
+
+```
+<a href="blob:xxx" download="myName">下载</a>
+```
 
 ObjectURL 与 DataURL 有什么区别呢？
 
