@@ -51,9 +51,9 @@ console.log(myBlob);
 
 ```
 // DOMString 类型数据
-var myArrayData = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
+var array = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
 // 生成 Blob 对象并指定 MIME 类型
-var myBlob = new Blob(myArrayData, {type: 'text/html'});
+var myBlob = new Blob(array, {type: 'text/html'});
 
 // 输出看看有啥
 console.log(myBlob); // => Blob {type: "text/html", size: 65, slice: function}
@@ -158,8 +158,8 @@ myReader4.readAsDataURL(myBlob);
 与 DataURL 不同的是，ObjectURL 创建的是一个躺在内存里的 DOMString, 它不像 DataURL 编码后数据保存到那一串字符串里，DOMString 依赖浏览器环境才能显示
 
 ```
-var myArrayData = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
-var myBlob = new Blob(myArrayData, {type: 'text/html'});
+var array = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
+var myBlob = new Blob(array, {type: 'text/html'});
 var url = URL.createObjectURL(myBlob);
 console.log(url);
 // ![demo img](public/img/o.png?raw=true)

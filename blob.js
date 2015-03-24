@@ -13,9 +13,9 @@ var options = {
 // # 举例1 - 创建一个简单的 Blob 对象
 
 // DOMString 类型数据
-var myArrayData = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
+var array = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
 // 生成 Blob 对象并指定 MIME 类型
-var myBlob = new Blob(myArrayData, {type: 'text/html'});
+var myBlob = new Blob(array, {type: 'text/html'});
 
 // 输出看看有啥
 console.log(myBlob); // => Blob {type: "text/html", size: 65, slice: function}
@@ -39,15 +39,15 @@ console.log(myBlob3); // => Blob {type: "", size: 20, slice: function}
 
 // # 举例2 - 将 Blob 对象转化为 URL 形式
 
-var myArrayData = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
-var myBlob = new Blob(myArrayData, {type: 'text/html'});
+var array = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
+var myBlob = new Blob(array, {type: 'text/html'});
 var url = URL.createObjectURL(myBlob);
 console.log(url); // => blob:http%3A//www.alloyteam.com/ba206814-56f7-4277-93b1-50f2fff124bd
 
 // # 举例3 - 将 Blob 对象的数据导出
 
-var myArrayData = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
-var myBlob = new Blob(myArrayData, {type: 'text/html'});
+var array = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>']
+var myBlob = new Blob(array, {type: 'text/html'});
 
 // 使用 FileReader 对象对 Blob 对象的数据进行读取
 // #3-1导出为 ArrayBuffer
