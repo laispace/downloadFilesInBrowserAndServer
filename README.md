@@ -173,9 +173,11 @@ console.log(url);
 
 这有什么用呢？下载文件！
 
-比如我们需要下载这个 myBlob 的话，可以配合 a 标签的 download 属性, 将 URL.createObjectURL 返回的数据复制给 a 标签的 href 属性，再给 a 标签添加 download 属性，则点击这个 a 标签后，将会下载文件。
+比如我们需要下载这个 myBlob 的话，可以配合 a 标签的 download 属性, 将 URL.createObjectURL 返回的数据复制给 a 标签的 href 属性，再给 a 标签添加 download 属性，则触发点击这个 a 标签后，将会下载文件。
 
 ![demo img](public/img/r.png?raw=true)
+
+若需要指定下载的名字，则给 download 属性赋值，如 <a href="blob:xxx" download="myName">下载</a>
 
 ObjectURL 与 DataURL 有什么区别呢？
 
