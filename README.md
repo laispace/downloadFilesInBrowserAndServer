@@ -287,7 +287,7 @@ ajax 异步下载文件，如何得知所有文件下载完成呢？
 ```
 $ git clone https://github.com/laispace/downloadFilesInBrowserAndServer.git
 
-$ cd laiDownloadDemo
+$ cd downloadFilesInBrowserAndServer
 
 $ npm install
 
