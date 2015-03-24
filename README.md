@@ -1,10 +1,10 @@
-# 使用 JSZip 和 FileSaver 在浏览器端下载文件
+# 在浏览器端和客户端下载并打包文件
 
 考虑以下场景：
 
 我们在编写一些类库时可能需要提供定制化功能，假设我们有以下目录结构：
 
-![demo img](public/img/dir.png?raw=true);
+![demo img](public/img/dir.png?raw=true)
 
 用户可能需要打包这个目录下的所有文件，或其中一些文件的组合（在定制组件的场景下）。
 
