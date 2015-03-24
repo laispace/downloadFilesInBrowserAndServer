@@ -41,7 +41,7 @@ console.log(myBlob);
 // ![demo img](public/img/a.png?raw=true);
 ```
 
-创建了一个 Blob 实例后，它具有两个属性和一个方法。
+创建了一个 Blob 实例后，它具有两个属性和一个方法（File 对象的 size 和 type 属性正是继承自 Blob 的）
 
 - 两个属性：
 
@@ -85,10 +85,17 @@ console.log(myBlob2);
 var myBlob3 = myBlob.slice(10, 30);
 console.log(myBlob3);
 
+// 第三个参数可指定 MIME 类型，若不指定，则继承自 myBlob 的类型
+
 // ![demo img](public/img/d.png?raw=true)
 ```
 
 ![demo img](public/img/e.png?raw=true)
+
+
+slice 方法能干啥？
+
+当我们需要上传一个大文件时，可以用它来将一个文件切割为多个，然后分段上传到服务器。
 
 ## 使用 Blob 对象
 
@@ -188,7 +195,9 @@ ObjectURL 与 DataURL 有什么区别呢？
 
 ![demo img](public/img/v.png?raw=true)
 
-数据不见了！因为浏览器回收了这段内存，那这段 blob: 引用的  DOMString 不再存在。
+数据不见了！因为浏览器页面关闭后回收了这段内存，那这段 blob: 引用的  DOMString 不再存在。
+
+当然我们也可以手动调用 URL.revokeObjectURL() 的方式来回收（当多次调用 URL.createObjectURL 用完后，即时释放内存很重要）。
 
 在浏览器地址栏输入 dataURL， 发现 dataURL 是真实的数据，不会随页面关闭而消失：
 
