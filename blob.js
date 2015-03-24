@@ -64,14 +64,8 @@ myReader2.onload = function () {
 };
 myReader2.readAsText(myBlob);
 
-// #3-3导出为 BinaryString
-var myReader3 = new FileReader();
-myReader3.onload = function () {
-    console.log('readAsBinaryString: ', myReader3.result);
-};
-myReader3.readAsBinaryString(myBlob);
 
-// #3-4导出为 DataURL
+// #3-3导出为 DataURL
 var myReader4 = new FileReader();
 myReader4.onload = function () {
     console.log('readAsDataURL: ', myReader4.result);

@@ -140,11 +140,11 @@ myReader2.readAsText(myBlob);
 - 导出为 DataURL
 
 ```
-var myReader4 = new FileReader();
-myReader4.onload = function () {
-    console.log('readAsDataURL: ', myReader4.result);
+var myReader3 = new FileReader();
+myReader3.onload = function () {
+    console.log('readAsDataURL: ', myReader3.result);
 };
-myReader4.readAsDataURL(myBlob);
+myReader3.readAsDataURL(myBlob);
 
 // ![demo img](public/img/m.png?raw=true)
 ```
