@@ -130,23 +130,6 @@ myReader2.readAsText(myBlob);
 
 ![demo img](public/img/j.png?raw=true)
 
-- 导出为 BinaryString, 二进制字符串
-
-```
-var myReader3 = new FileReader();
-myReader3.onload = function () {
-    console.log('readAsBinaryString: ', myReader3.result);
-};
-myReader3.readAsBinaryString(myBlob);
-// ![demo img](public/img/k.png?raw=true)
-```
-
-![demo img](public/img/l.png?raw=true)
-
-readAsBinaryString 为什么和 readAsText 输出的是一样的？
-
-这里输出虽然是字符串，但实际上它是 0 和 1 的二进制数据形式，我们可以用更底层的二进制数据接口对二进制字符串进行处理。
-
 - 导出为 DataURL
 
 ```
