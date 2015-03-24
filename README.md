@@ -208,6 +208,8 @@ dataURL 是真实的数据，可以用于对小图片进行编码等操作；
 
 # 服务器端与客户端下载文件
 
+介绍了那么多 Blob, 是不是跑题了。。。
+
 ## 服务器端下载文件
 
 服务器端下载文件主要有几步：
@@ -253,6 +255,12 @@ ajax 异步下载文件，如何得知所有文件下载完成呢？
 可以自己维护一个计数器，或者使用 Promise 吧！
 
 ![demo img](public/img/z-a.png?raw=true)
+
+注意：我这里使用了以下优秀类库
+
+- [jsZip](https://stuk.github.io/jszip/) 用于在浏览器端压缩文件
+- [FileSaver](https://github.com/eligrey/FileSaver.js) 用于将文件保存到本地
+- [bluebird](https://github.com/petkaantonov/bluebird) 用于控制异步 AJAX 获取文件
 
 ## 服务器端与浏览器端下载文件的对比
 
