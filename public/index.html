@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<form id="download-form" action="/download" method="get">
+    <legend>下载文件</legend>
+    <fieldset>
+        <legend>css/</legend>
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="css/main.css" checked/> main.css
+            </label>
+            <a href="css/main.css" download>下载</a>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>js/</legend>
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="js/lib/bluebird.min.js" checked/> bluebird.min.js
+            </label>
+            <a href="js/lib/bluebird.min.js" download>下载</a>
+        </div>
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="js/lib/jquery.min.js" checked/> jquery.min.js
+            </label>
+            <a href="js/lib/jquery.min.js" download>下载</a>
+        </div>   
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="js/lib/filesaver.min.js" checked/> filesaver.min.js
+            </label>
+            <a href="js/lib/filesaver.min.js" download>下载</a>
+        </div>
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="js/lib/jszip.min.js" checked/> jszip.min.js
+            </label>
+            <a href="js/lib/jszip.min.js" download>下载</a>
+        </div>
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="js/main.js" checked/> main.js
+            </label>
+            <a href="js/main.js" download>下载</a>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>img/</legend>
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="img/a.png" checked/> a.png
+            </label>
+            <a href="img/a.png" download>下载</a>
+        </div>  
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="img/b.png" checked/> b.png
+            </label>
+            <a href="img/b.png" download>下载</a>
+        </div>
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="files" value="img/c.png" checked/> c.png
+            </label>
+            <a href="img/c.png" download>下载</a>
+        </div>
+    </fieldset>
+    <input type="submit" id="server-download-btn" value="服务器下载"/>
+    <input type="button" id="client-download-btn" value="客户端下载"/>
+</form>
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/bluebird.min.js"></script>
+<script src="js/lib/filesaver.min.js"></script>
+<script src="js/lib/jszip.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

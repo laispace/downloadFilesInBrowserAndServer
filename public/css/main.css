@@ -1,0 +1,51 @@
+body {
+    font-size: 20px;
+}
+
+fieldset {
+	border: 1px solid #eee;
+}
+
+.form-item {
+	display: inline-block;
+	margin: 5px;
+	padding: 5px;
+	height: 30px;
+
+	cursor: pointer;
+	font-size: 24px;
+	-webkit-user-select: none;
+}
+.form-item a {
+	opacity: 0;
+	color: blue;
+	font-size: 12px;
+	vertical-align: middle;
+	transition: all .3s ease-in;
+}
+.form-item:hover a {
+	opacity: 1;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+input[type="submit"],
+input[type="button"] {
+	outline: none;
+	border: none;
+	background: none;
+	padding: 6px 12px;
+	margin-top: 10px;
+  	font-size: 14px;
+  	line-height: 14px;
+  	text-align: center;
+  	vertical-align: middle;
+  	cursor: pointer;
+  	-webkit-user-select: none;
+  	border: 1px solid transparent;
+  	border-radius: 4px;
+	color: #333;
+  	border-color: #ccc;
+}

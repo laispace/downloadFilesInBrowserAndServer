@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>create ObjectURL</title>
+</head>
+<body>
+	<p id="objectURL"></p>
+	<a id="download-btn" href="#" download>下载</a>
+
+	<script>
+
+		// DOMString 类型数据
+		var myArrayData = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>'];
+		// 生成 Blob 对象并指定 MIME 类型
+		var myBlob = new Blob(myArrayData, {type: 'text/html'});
+
+		var url = URL.createObjectURL(myBlob);
+
+		document.getElementById('download-btn').href   = url;
+		document.getElementById('objectURL').innerHTML = url;
+	</script>
+</body>
+</html>

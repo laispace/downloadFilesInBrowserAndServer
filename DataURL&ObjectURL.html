@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DataURL and ObjectURL</title>
+	<style>
+		span {
+			word-wrap: break-word;
+		}
+	</style>
+</head>
+<body>
+
+	<div>objectURL: <span id="objectURL"></span></div>
+	<br/>
+	<div>dataURL: <span id="dataURL"></span></div>
+
+	<script>
+		var myArrayData = ['<div id="myId"><a href="http://alloyteam.com">Alloyteam</a></div>'];
+		var myBlob = new Blob(myArrayData, {type: 'text/html'});
+
+		// 生成 objectURL
+		var objectUrl = URL.createObjectURL(myBlob);
+		document.getElementById('objectURL').innerHTML = objectUrl;
+
+		// 生成 dataURL
+		var myReader = new FileReader();
+		myReader.onload = function () {
+			var dataUrl  = myReader.result;
+			document.getElementById('dataURL').innerHTML = dataUrl;
+
+		};
+		myReader.readAsDataURL(myBlob);
+	</script>
+</body>
+</html>
